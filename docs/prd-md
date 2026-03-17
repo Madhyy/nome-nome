@@ -2,9 +2,10 @@
 
 ## 1. Visão Geral e Objetivo
 
-O **Roubank** é uma aplicação web didática que simula as operações básicas de uma instituição financeira (abertura de conta, depósitos, saques e extratos).
+O *nome aqui* é uma aplicação web voltada para entusiastas de cinema e TV que sofrem com a "paralisia de decisão". 
+O objetivo é permitir que o usuário gerencie uma lista de interesses (Watchlist) de forma dinâmica e utilize um sistema de sorteio inteligente (Roleta) para escolher o que assistir, baseando-se em filtros de humor, tempo disponível e dados reais de mercado.
 
-**O grande diferencial (Regra de Negócio Principal):** Ao contrário dos bancos tradicionais modernos, o Roubank cobra **taxas abusivas** para absolutamente qualquer operação que o cliente realize. O objetivo do sistema é registrar as movimentações financeiras do usuário sempre subtraindo uma porcentagem ou valor fixo sob o pretexto de "taxas de manutenção" ou "impostos do banco".
+**O grande diferencial (Regra de Negócio Principal):** Enquanto aplicações comuns apenas armazenam nomes de filmes, o CineRoulette utiliza dados reais da API do TMDB para cruzar a sua lista com o seu contexto atual. O grande diferencial está na Roleta Contextual: o sistema filtra sua biblioteca baseando-se no seu tempo disponível (ex: "tenho apenas 40 min") e no seu humor, sorteando apenas títulos que tecnicamente se encaixam no seu momento.
 
 ## 2. Atores do Sistema
 
