@@ -5,12 +5,12 @@
 O *nome aqui* é uma aplicação web voltada para entusiastas de cinema e TV que sofrem com a "paralisia de decisão". 
 O objetivo é permitir que o usuário gerencie uma lista de interesses (Watchlist) de forma dinâmica e utilize um sistema de sorteio inteligente (Roleta) para escolher o que assistir, baseando-se em filtros de humor, tempo disponível e dados reais de mercado.
 
-**O grande diferencial (Regra de Negócio Principal):** Enquanto aplicações comuns apenas armazenam nomes de filmes, o CineRoulette utiliza dados reais da API do TMDB para cruzar a sua lista com o seu contexto atual. O grande diferencial está na Roleta Contextual: o sistema filtra sua biblioteca baseando-se no seu tempo disponível (ex: "tenho apenas 40 min") e no seu humor, sorteando apenas títulos que tecnicamente se encaixam no seu momento.
+**O grande diferencial (Regra de Negócio Principal):** O grande diferencial está na roleta contextual, o sistema filtra sua biblioteca baseando-se no seu tempo disponível (ex: "tenho apenas 40 min") e no seu humor, sorteando apenas títulos que tecnicamente se encaixam no seu momento.
 
 ## 2. Atores do Sistema
 
-- **Visitante:** Usuário não autenticado que acessa a página inicial e deseja abrir uma conta.
-- **Cliente:** Usuário autenticado que possui saldo (ou dívidas) no banco e realiza operações financeiras.
+- **Visitante:** Usuário não autenticado que pode buscar por títulos e ter acesso aos detalhes, entretanto não consegue salvar nada em uma lista persistente ou girar a roleta com itens próprios.
+- **Cliente:** Usuário autenticado que pode buscar títulos e gerenciar a própria lista salva, além do acesso aos filtros personalizados.
 - **O Banco (Sistema):** Ator invisível que aplica as regras de negócio e desconta as taxas automaticamente a cada transação do Cliente.
 
 ## 3. Histórias de Usuário e Escopo
