@@ -2,7 +2,7 @@
 
 ### **Autor:** Maria Eduarda Ao
 
-Este projeto tem como objetivo listar filmes e séries, permitindo que o usuário o classifique, por exemplo: adicionar aos favoritados, adicionar o título na lista "para ver" ou "finalizado". Constando também com filtros de procura ou decisão (uma roleta de decisão) sobre qual série/ filme assistir.
+Este projeto tem como objetivo listar filmes e séries, permitindo que o usuário os classifique, por exemplo: adicionar aos favoritados, adicionar o título na lista "para ver" ou "finalizado". Constando também com filtros de procura ou decisão (uma roleta de decisão) sobre qual série/ filme assistir.
 
 O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
