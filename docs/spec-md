@@ -8,22 +8,65 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura
 
 ```mermaid
 erDiagram
-CLIENTE ||--o{ TRANSACAO : "realiza (e paga taxa)"
-CLIENTE {
-string id PK "Gerado automaticamente"
-string nome
-string cpf "Usado para o login"
-string senha
-float saldo "Atualizado a cada operação"
-}
-TRANSACAO {
-string id PK
-string clienteId FK "Vínculo com o Cliente"
-string tipo "DEPOSITO, SAQUE ou TAXA"
-float valor
-string data "Formato ISO (YYYY-MM-DD)"
-string descricao "Ex: 'Taxa de manutenção respiratória'"
-}
+    USUARIO ||--o{ WATCHLIST : possui
+    USUARIO ||--o{ FILTRO : aplica
+    USUARIO ||--o{ SORTEIO : realiza
+    WATCHLIST ||--o{ ITEM_CONTEUDO : contem
+    ITEM_CONTEUDO ||--o{ GENERO : pertence
+    FILTRO ||--o{ GENERO : filtra
+    SORTEIO ||--o{ ITEM_CONTEUDO : seleciona
+    SORTEIO ||--o{ FILTRO : utiliza
+
+    USUARIO {
+        int idUsuario PK
+        string nomeUsuario UK
+        string email UK
+        string senhaHash
+        datetime dataCriacao
+        datetime dataUltimaAtualizacao
+    }
+
+    WATCHLIST {
+        int idWatchlist PK
+        int idUsuario FK
+        string nome
+        datetime dataCriacao
+    }
+
+    ITEM_CONTEUDO {
+        int idItem PK
+        int idWatchlist FK
+        string idAPIExterna
+        string titulo
+        text sinopse
+        string urlPoster
+        int duracao
+        boolean jaVisto
+        datetime dataAdicao
+        datetime dataModificacao
+    }
+
+    GENERO {
+        int idGenero PK
+        string nomeGenero UK
+    }
+
+    FILTRO {
+        int idFiltro PK
+        int idUsuario FK
+        int tempoMaximoDisponivel
+        int idGenero FK
+        datetime dataAplicacao
+    }
+
+    SORTEIO {
+        int idSorteio PK
+        int idUsuario FK
+        int idItemSelecionado FK
+        int idFiltro FK
+        datetime dataHoraSorteio
+        boolean foiAssistido
+    }
 ```
 
 ## 2. Dicionário de Dados
