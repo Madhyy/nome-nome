@@ -1,36 +1,61 @@
-# 🎨 Design System - Roubank
+# Design System: MyView "Obsidian Cinema"
 
-Neste projeto, utilizamos um framework UI e aplicamos customizações pontuais para refletir a identidade visual.
+## 1. Visão Geral
+O MyView utiliza o sistema visual **Obsidian Cinema**, projetado para oferecer uma experiência de curadoria premium, imersiva e focada no conteúdo. A estética é inspirada no ambiente de salas de cinema escuras, utilizando tons profundos e acentos vibrantes.
 
-### 1. Framework Base
+---
 
-- **Framework escolhido:** MaterializeCSS
-- **Motivação:** Oferece componentes baseados no Material Design, permitindo uma prototipagem rápida e um visual corporativo, limpo e confiável.
+## 2. Tokens de Cores (Paleta Obsidian)
 
-### 2. Paleta de Cores (Customização)
+### Cores de Fundo (Surface)
+- **Deep Black:** `#0e0e0e` (Fundo principal, sólido)
+- **Surface Dark:** `#131313` (Cards, seções e áreas de destaque secundário)
+- **Glass Blur:** `rgba(14, 14, 14, 0.6)` com `backdrop-filter: blur(20px)` (Navegação e overlays)
 
-As variáveis de cor do framework foram escolhidas para induzir o usuário ao erro ou alertá-lo (tarde demais) sobre as taxas:
+### Cores de Acento (Primary & Brand)
+- **Cinema Red:** `#E50914` (Cor principal da marca, logos e CTAs críticos)
+- **Coral Glow:** `#ff8e80` (Acento suave, ícones ativos e hover)
+- **Neon Purple:** `#bf81ff` (Indicadores de status 'Assistindo' e interações vibrantes)
 
-- **Cor Primária (Atenção/Taxas):** `#D32F2F` _(Red darken-2)_
-  - _Uso:_ Botões de confirmação de transações (saque, depósito), ícones de taxas no extrato e alertas. Representa o perigo constante para o bolso do cliente.
-- **Cor Secundária (Base):** `#212121` _(Grey darken-4)_
-  - _Uso:_ Barra de navegação (Navbar), rodapé e textos de destaque. Transmite frieza institucional.
-- **Cor de Fundo (Background):** `#F5F5F5` _(Grey lighten-4)_
-  - _Uso:_ Fundo de todas as páginas para destacar os painéis brancos flutuantes.
-- **Cor de Sucesso:** `#388E3C` _(Green darken-2)_
-  - _Uso:_ Extremamente restrito. Usado apenas em mensagens onde o _banco_ leva vantagem (ex: "Taxa cobrada com sucesso!").
+### Cores de Texto (Typography)
+- **High Contrast:** `#ffffff` (Títulos e textos importantes)
+- **Medium Contrast:** `#adaaaa` (Sinopses, labels secundárias e estados inativos)
+- **Low Contrast:** `#484847` (Bordas sutis e metadados menos importantes)
 
-### 3. Tipografia
+---
 
-Importada via Google Fonts para substituir a fonte padrão do navegador e dar um ar mais moderno:
+## 3. Tipografia (The Cinema Type)
 
-- **Títulos (H1 a H6) e Destaques numéricos (Saldo):** `Roboto, sans-serif` (Peso: 700).
-- **Textos Corridos, Inputs e Tabelas de Extrato:** `Open Sans, sans-serif` (Peso: 400).
+### Fontes
+- **Manrope (Primary):** Utilizada para títulos, logo e elementos de interface que precisam de impacto e modernidade.
+- **Inter (Secondary):** Utilizada para corpo de texto, sinopses e metadados, focando em legibilidade máxima em tamanhos menores.
 
-### 4. Diretrizes de Uso de Componentes
+### Escala
+- **Display Lg:** Manrope, 36pt, Bold, Tracking -2% (Títulos de filmes em destaque)
+- **Headline:** Manrope, 24pt, Semi-Bold (Títulos de seções)
+- **Body Regular:** Inter, 14pt, Regular, Line-height 1.6 (Sinopses e descrições)
+- **Label Small:** Inter, 10pt, Medium, Uppercase, Tracking 10% (Tags e metadados)
 
-Regras para a aplicação dos componentes do MaterializeCSS dentro da lógica predatória do Roubank:
+---
 
-- **Botões de Ação (`.btn`):** Ações que resultam em cobrança de taxas devem usar o modificador `.btn-large` e a cor primária (vermelho), para chamar atenção e induzir o clique. Ações de cancelamento ou fuga usam botões sem preenchimento (`.btn-flat`) para passarem despercebidos.
-- **Cards (`.card`):** Usados obrigatoriamente para exibir o Saldo em destaque e encapsular as listagens do Extrato. Devem usar a sombra padrão (`z-depth-1`).
-- **Formulários (`.input-field`):** Os inputs devem ser largos e burocráticos.
+## 4. Componentes Padronizados
+
+### Cards de Título
+- **Formato:** Vertical (Poster ratio ~2:3)
+- **Bordas:** Arredondadas (Radius: 12px)
+- **Interação:** Elevação e brilho suave no hover.
+
+### Botões (CTAs)
+- **Primary:** Background Cinema Red, Texto Branco, Rounded 8px.
+- **Secondary:** Border Low Contrast, Background Transparente, Texto Medium Contrast.
+
+### Filtros (Chips)
+- **Estado Inativo:** Fundo Surface Dark, Texto Medium Contrast.
+- **Estado Ativo:** Fundo Coral Glow, Texto Deep Black.
+
+---
+
+## 5. Regras de Layout
+- **Grid:** 12 colunas (Desktop) / 4 colunas (Mobile).
+- **Espaçamento (Gutter):** 24px entre posters.
+- **Margens:** 64px (Desktop) / 20px (Mobile).
