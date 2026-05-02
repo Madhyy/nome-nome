@@ -2,10 +2,10 @@
 
 Este documento detalha a arquitetura técnica, o modelo de dados e os contratos de API (via JSON Server) necessários para o funcionamento do sistema de curadoria e sorteio MyView.
 
-🎨 1. Design System: MyView "Obsidian Cinema"
+## 🎨 1. Design System: MyView "Obsidian Cinema"
 Esta seção detalha a implementação visual e técnica da interface, seguindo a estética de salas de cinema imersivas.
 
-1.1 Design Tokens (CSS Variables)
+**1.1 Design Tokens (CSS Variables)**
 Os tokens serão implementados via :root no CSS para garantir que o Bootstrap possa ser customizado sem ferir a identidade visual.
 
 CSS
@@ -26,28 +26,28 @@ CSS
   --text-low: #484847;
 }
 
-1.2 Tipografia e Escala
+**1.2 Tipografia e Escala**
 - `Fontes`: Manrope (Títulos) e Inter (Corpo), importadas via Google Fonts.
 - `Uso`: Títulos de filmes utilizam 36pt/Bold, enquanto sinopses utilizam 14pt/1.6 line-height para garantir legibilidade.
 
-🛠️ 2. Framework CSS e Implementação
+## 🛠️ 2. Framework CSS e Implementação
 - `Framework Oficial`: Bootstrap 5 (v5.3)
 
-2.1 Justificativa de Escolha
+**2.1 Justificativa de Escolha**
 A escolha do Bootstrap se dá pela necessidade de componentes de layout robustos (Grids, Modais e Offcanvas para os filtros) que respeitam as restrições da disciplina. A estilização "Obsidian Cinema" será aplicada através de um arquivo theme.css que sobrescreve as classes utilitárias do Bootstrap (como .btn-primary e .card) utilizando os tokens definidos na seção anterior.
 
-2.2 Componentes Principais
+**2.2 Componentes Principais**
 - `Cards de Título`: Seguirão o Aspect Ratio de 2:3 (posters), com border-radius: 12px.
 - `Roleta (Sorteio)`: Implementada via Modal do Bootstrap, com fundo Surface Dark e animações em Cinema Red.
 - `Sistema de Grid`: Utilização do container-fluid do Bootstrap com gutters de 24px.
 
-🌐 3. Consumo de API Pública
+## 🌐 3. Consumo de API Pública
 Para alimentar o catálogo de filmes e séries, a aplicação consumirá a seguinte API:
 
 - `API`: The Movie Database (TMDB).
 - `Integração`: O idAPIExterna no nosso db.json corresponde ao tmdb_id.
 
-Endpoints utilizados:
+**Endpoints utilizados:**
 
 - `GET /movie/{id}`: Para buscar detalhes, duração e gêneros.
 - `GET /search/multi`: Para permitir que o usuário busque e adicione novos itens à sua Watchlist.
