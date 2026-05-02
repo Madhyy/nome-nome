@@ -2,7 +2,7 @@
 
 ## 1. Visão Geral e Objetivo
 
-O *nome aqui* é uma aplicação web voltada para entusiastas de cinema e TV que sofrem com a "paralisia de decisão". 
+O MyView é uma aplicação web voltada para entusiastas de cinema e TV que sofrem com a "paralisia de decisão". 
 O objetivo é permitir que o usuário gerencie uma lista de interesses (Watchlist) de forma dinâmica e utilize um sistema de sorteio inteligente (Roleta) para escolher o que assistir, baseando-se em filtros de humor, tempo disponível e dados reais de mercado.
 
 **O grande diferencial (Regra de Negócio Principal):** O grande diferencial está na roleta contextual, o sistema filtra sua biblioteca baseando-se no seu tempo disponível (ex: "tenho apenas 40 min") e no seu humor, sorteando apenas títulos que tecnicamente se encaixam no seu momento.
